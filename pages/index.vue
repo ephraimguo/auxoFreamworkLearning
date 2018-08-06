@@ -1,6 +1,9 @@
 
 <template>
   <section class="container">
+
+    <navbar/>
+
     <create-user-form @create="create"/>
     <create-topic-form @createX="createTopic"/>
     <img src="~assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
@@ -34,11 +37,13 @@ import axios from '~/plugins/axios';
 import domain from '~/plugins/domain';
 import CreateUserForm from '~/components/CreateUserForm.vue';
 import CreateTopicForm from '~/components/CreateTopicForm.vue';
+import Navbar from '~/components/Navbar.vue';
 
 export default {
   components:{
     CreateUserForm,
-    CreateTopicForm
+    CreateTopicForm,
+    Navbar
   },
   async fetch ({ store, params }) {
     let users = (await axios.get('/users')).data;
@@ -66,23 +71,25 @@ export default {
 </script>
 
 <style scoped>
-.title
-{
-  margin: 30px 0;
-}
-.users
-{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.user
-{
-  margin: 10px 0;
-}
+    .title
+    {
+      margin: 30px 0;
+    }
+    .users
+    {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .user
+    {
+      margin: 10px 0;
+    }
 
-  .topic{
-    background-color: #00B7FF;
-    border: 1px solid red;
-  }
+    .topic{
+      background-color: #00B7FF;
+      border: 1px solid red;
+    }
+
+
 </style>

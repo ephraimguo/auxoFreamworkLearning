@@ -3,8 +3,15 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _32d7231b = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
-const _3c793043 = () => import('../pages/_id.vue' /* webpackChunkName: "pages/_id" */).then(m => m.default || m)
+const _9d1a9bd0 = () => import('../pages/testMe.vue' /* webpackChunkName: "pages/testMe" */).then(m => m.default || m)
+const _9a4ed3a2 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _3cbd051c = () => import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */).then(m => m.default || m)
+const _5f78b981 = () => import('../pages/about/a.vue' /* webpackChunkName: "pages/about/a" */).then(m => m.default || m)
+const _2f481660 = () => import('../pages/test.vue' /* webpackChunkName: "pages/test" */).then(m => m.default || m)
+const _a5865816 = () => import('../pages/sub/b.vue' /* webpackChunkName: "pages/sub/b" */).then(m => m.default || m)
+const _a5a28718 = () => import('../pages/sub/a.vue' /* webpackChunkName: "pages/sub/a" */).then(m => m.default || m)
+const _5adf1e18 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _55ae205c = () => import('../pages/_id.vue' /* webpackChunkName: "pages/_id" */).then(m => m.default || m)
 
 
 
@@ -65,13 +72,49 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
+			path: "/testMe",
+			component: _9d1a9bd0,
+			name: "testMe"
+		},
+		{
+			path: "/about",
+			component: _9a4ed3a2,
+			children: [
+				{
+					path: "",
+					component: _3cbd051c,
+					name: "about"
+				},
+				{
+					path: "a",
+					component: _5f78b981,
+					name: "about-a"
+				}
+			]
+		},
+		{
+			path: "/test",
+			component: _2f481660,
+			name: "test"
+		},
+		{
+			path: "/sub/b",
+			component: _a5865816,
+			name: "sub-b"
+		},
+		{
+			path: "/sub/a",
+			component: _a5a28718,
+			name: "sub-a"
+		},
+		{
 			path: "/",
-			component: _32d7231b,
+			component: _5adf1e18,
 			name: "index"
 		},
 		{
 			path: "/:id",
-			component: _3c793043,
+			component: _55ae205c,
 			name: "id"
 		}
     ],

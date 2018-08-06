@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt/>
+    <nuxt/> <!-- page content insertion point -->
     <my-footer/>
   </div>
 </template>
