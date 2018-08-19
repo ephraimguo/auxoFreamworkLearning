@@ -20,4 +20,4 @@ module.exports = class Topic extends Actor{ // expose the class Topic to allow o
       }
     }
   }
-}
+};

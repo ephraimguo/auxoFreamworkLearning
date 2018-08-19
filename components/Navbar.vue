@@ -3,8 +3,8 @@
   <nav class="navbar">
     <nuxt-link :to="{path:'/sub/a'}"> AAA </nuxt-link> |
     <nuxt-link :to="{path:'/sub/b'}"> BBB </nuxt-link> |
-    <nuxt-link :to="{path:'/test'}"> test</nuxt-link> |
-    <nuxt-link :to="{path:'/testMe'}"> test Me</nuxt-link> |
+    <nuxt-link :to="{path:'/test'}"> test </nuxt-link> |
+    <nuxt-link :to="{path:'/testMe'}"> test Me </nuxt-link> |
     <nuxt-link :to="{path:'/about'}">  About </nuxt-link> |
   </nav>
 
